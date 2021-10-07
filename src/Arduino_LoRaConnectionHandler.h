@@ -38,7 +38,10 @@ class LoRaConnectionHandler : public ConnectionHandler
     virtual int write(const uint8_t *buf, size_t size) override;
     virtual int read() override;
     virtual bool available() override;
-
+    
+    inline LoRaModem &getModem() {
+        return _modem;
+    }
 
   protected:
 
